@@ -7,8 +7,7 @@ productos.forEach(producto => {
     catalogo.innerHTML += `
 
         <div class="producto">
-
-            <span class="genero">
+            <span class="genero ${producto.genero}">
 
                 ${
                     producto.genero === "mujer"
