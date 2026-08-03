@@ -53,3 +53,24 @@ buscador.addEventListener("keyup", () => {
     });
 
 });
+
+
+// Restaurar catálogo al hacer clic en el menú
+
+const enlaces = document.querySelectorAll("nav a");
+
+enlaces.forEach(enlace => {
+
+    enlace.addEventListener("click", () => {
+
+        buscador.value = "";
+
+        const tarjetas = document.querySelectorAll(".producto");
+
+        tarjetas.forEach(tarjeta => {
+            tarjeta.style.display = "block";
+        });
+
+    });
+
+});
