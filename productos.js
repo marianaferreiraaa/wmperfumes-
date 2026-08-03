@@ -50,7 +50,7 @@ const productos = [
     },
 
     {
-        nombre: "Calvin Klein In2U 100 ml",
+        nombre: "Calvin Klein In2U for Him 100 ml",
         notas: "Frescura, Cítricos",
         precio: "$35.000",
         imagen: "imagenes/ck.png"
