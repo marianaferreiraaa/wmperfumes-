@@ -8,6 +8,18 @@ productos.forEach(producto => {
 
         <div class="producto">
 
+            <span class="genero">
+
+                ${
+                    producto.genero === "mujer"
+                        ? "♀️"
+                        : producto.genero === "hombre"
+                        ? "♂️"
+                        : "⚥"
+                }
+
+            </span>
+
             <img src="${producto.imagen}" alt="${producto.nombre}">
 
             <h2>${producto.nombre}</h2>
@@ -68,7 +80,9 @@ enlaces.forEach(enlace => {
         const tarjetas = document.querySelectorAll(".producto");
 
         tarjetas.forEach(tarjeta => {
+
             tarjeta.style.display = "block";
+
         });
 
     });
