@@ -1,0 +1,55 @@
+const catalogo = document.getElementById("catalogo");
+
+// Mostrar los productos
+
+productos.forEach(producto => {
+
+    catalogo.innerHTML += `
+
+        <div class="producto">
+
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+
+            <h2>${producto.nombre}</h2>
+
+            <p class="notas">${producto.notas}</p>
+
+            <p class="precio">${producto.precio}</p>
+
+            <a href="https://wa.me/56999293833?text=Hola,%20me%20interesa%20el%20${encodeURIComponent(producto.nombre)}" target="_blank">
+
+                Consultar por WhatsApp
+
+            </a>
+
+        </div>
+
+    `;
+
+});
+
+
+// Función del buscador
+
+const buscador = document.getElementById("buscador");
+
+buscador.addEventListener("keyup", () => {
+
+    const texto = buscador.value.toLowerCase();
+
+    const tarjetas = document.querySelectorAll(".producto");
+
+    tarjetas.forEach(tarjeta => {
+
+        const nombre = tarjeta
+            .querySelector("h2")
+            .textContent
+            .toLowerCase();
+
+        tarjeta.style.display = nombre.includes(texto)
+            ? "block"
+            : "none";
+
+    });
+
+});
